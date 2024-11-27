@@ -2,8 +2,8 @@ mixin mediaList(prefix, items, customClass = '')
   ul.media-list.mt-3.list-none.pl-0.mx-auto(class=customClass)
     each item, index in items
       li.mb-2
-        button.media-list-btn.pt-1.pb-3.px-4.w-full.text-left.flex.items-baseline.mx-auto.relative(
-          class="sm:px-10 sm:pt-1 sm:max-w-[380px]"
+        button.media-list-btn.pt-1.pb-4.px-4.w-full.text-left.flex.items-baseline.mx-auto.relative(
+          class="sm:px-10 sm:pt-2 sm:max-w-[380px]"
           data-target=`${prefix}-media-${index}`
         )
           span.mr-2.text-yellow-400 ▶&nbsp; 
@@ -18,27 +18,27 @@ mixin mediaList(prefix, items, customClass = '')
             id=`${prefix}-media-${index}`
             class="sm:max-w-[880px] sm:rounded-t-2xl"
           )
-            iframe(
-              id=`youtube-iframe-${prefix}-${index}`
-              src=`https://www.youtube.com/embed/${item.videoId}?enablejsapi=1`
-              title="YouTube video player"
-              class="absolute top-0 left-0 w-full h-full"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            )
+            //- iframe(
+            //-   id=`youtube-iframe-${prefix}-${index}`
+            //-   src=`https://www.youtube.com/embed/${item.videoId}?enablejsapi=1`
+            //-   title="YouTube video player"
+            //-   class="absolute top-0 left-0 w-full h-full"
+            //-   frameborder="0"
+            //-   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            //-   allowfullscreen
+            //- )
         if item.spotifyLink
           div.media-list-video.spotify-container.relative.w-full.overflow-hidden.hidden(
             id=`${prefix}-media-${index}`
             class="sm:max-w-[880px] h-[420px]"
           )
-            iframe(
-              src=`https://open.spotify.com/embed/${item.spotifyLink}`
-              title="Spotify player"
-              class="absolute top-0 left-0 w-full h-full"
-              frameborder="0"
-              allow="encrypted-media"
-              allowfullscreen
-            )
+            //- iframe(
+            //-   src=`https://open.spotify.com/embed/${item.spotifyLink}`
+            //-   title="Spotify player"
+            //-   class="absolute top-0 left-0 w-full h-full"
+            //-   frameborder="0"
+            //-   allow="encrypted-media"
+            //-   allowfullscreen
+            //- )
           
         .media-list-info.text-justify.leading-6.rounded-b-2xl.hidden Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec arcu purus, consectetur ut libero eget, vulputate varius lacus. Nulla facilisi. Suspendisse quis velit lacus.
