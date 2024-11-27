@@ -3,8 +3,7 @@
 
 ## Description
 
-This is an example readme file.
-Describe your site/app here.
+node v22.11.0
 
 ## Technologies used
 

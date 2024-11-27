@@ -1,0 +1,137 @@
+// body {
+//     @apply bg-pallete-primary-1 h-full bg-[url('../assets/images/body-bg-2.jpg')] bg-center bg-cover bg-blend-color-dodge;
+// }
+
+.content-holder {
+    @apply relative pt-2 pb-4 bg-black bg-opacity-70 shadow-xl rounded-xl;
+    box-shadow: 0px 0px 28px #000000;
+}
+
+@layer components {
+    .sticker {
+        @apply w-[190px] h-[190px];
+        filter: drop-shadow(4px 3px 1px black);
+        &--shiba-cartoony-bitch {
+            @apply absolute bg-[url('../assets/images/sticker-shiba-cartoony-bitch.png')] bg-contain bg-no-repeat;
+            transform: rotate(-10deg);
+            left: auto;
+            right: 10px;
+            top: 360px;
+            width: 100px;
+            height: 100px;
+            @screen sm {
+                top: 300px;
+                width: 130px;
+                height: 130px;
+            }
+            @screen md {
+                top: 240px;
+                left: -20px;
+                right: auto;
+                width: 150px;
+                height: 150px;
+            }
+            @screen lg {
+                top: 190px;
+                left: 40px;
+                width: 190px;
+                height: 190px;
+            }
+        }
+        &--rainbow-dash-cutie-mark {
+            @apply absolute bg-[url('../assets/images/sticker-rainbow-dash-cutie-mark.png')] bg-contain bg-no-repeat;
+            transform: rotate(35deg);
+            right: 10px;
+            left: auto;
+            top: 731px;
+            width: 190px;
+            height: 190px;
+        }
+        &--orrell-badboys {
+            @apply absolute bg-[url('../assets/images/sticker-orrell-badboys.png')] bg-contain bg-no-repeat;
+            right: 70px;
+            left: auto;
+            top: 381px;
+            border-radius: 20px;
+            transform: rotate(17deg);
+        }
+        &--vr-shiba-rock {
+            @apply absolute bg-[url('../assets/images/sticker-vr-shiba-rock.png')] bg-contain bg-no-repeat;
+            top: auto;
+            bottom: -30px;
+            left: -20px; 
+            right: auto;
+            width: 340px;
+            height: 340px;
+            transform: rotate(13deg);
+        }
+    }
+
+    .media-list-btn {
+        &:hover {
+            opacity: 0.8;
+        }
+        &.active {
+            background: rgba(0, 0, 0, 0.8);
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &.active {
+            @apply rounded-t-2xl;
+        }
+    }
+
+    .media-list-info {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Add this class to handle aspect ratio */
+    .responsive-video {
+        padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+        height: 0;
+    }
+
+    .responsive-video iframe {
+        @apply absolute top-0 left-0 w-full h-full;
+    }
+
+    .spotify-container {
+        position: relative; /* Keep positioning relative to contain the iframe */
+        padding-top: 160px; /* Maintain aspect ratio for Spotify player */
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden; /* Hide any overflow issues */
+    }
+
+    .spotify-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none; /* Remove iframe border for cleaner appearance */
+    }
+}
+
+.custom-scrollbar-1::-webkit-scrollbar {
+	width: 10px;
+	background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.custom-scrollbar-1::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: rgb(205, 205, 205);
+    border-radius: 10px;
+}
+
+.custom-scrollbar-1::-webkit-scrollbar-thumb {
+	background-color: #191919;
+	border: 2px solid #555555;
+    border-radius: 10px;
+}
+
+
