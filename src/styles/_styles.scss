@@ -8,6 +8,9 @@
 }
 
 @layer components {
+    .holder-btn-close-all {
+        @apply absolute bottom-[-45px] right-[10px] text-white z-10 text-xl;
+    }
     .sticker {
         @apply w-[190px] h-[190px];
         filter: drop-shadow(4px 3px 1px black);
@@ -77,6 +80,9 @@
             background: rgba(0, 0, 0, 0.8);
             &:hover {
                 opacity: 1;
+                .media-list-btn-close {
+                    @apply text-yellow-400;
+                }
             }
         }
         &.active {
