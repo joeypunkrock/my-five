@@ -71,7 +71,7 @@ module.exports = (env, argv) => {
     entry: entryPages,
 
     output: {
-      path: path.join(__dirname, "dist"),
+      path: path.join(__dirname, "docs"),
       publicPath: isProd ? "auto" : "/",
       clean: true,
     },
@@ -210,7 +210,7 @@ module.exports = (env, argv) => {
 
     devServer: {
       static: {
-        directory: path.join(__dirname, "dist"),
+        directory: path.join(__dirname, "docs"),
       },
       compress: true,
       open: true, // open in default browser
