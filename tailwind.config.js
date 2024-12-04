@@ -23,6 +23,9 @@ module.exports = {
 					"5": "#E0E1DD",
 				}
 			},
+			screens: {
+				smallMobile: '415px', // Define your custom screen size
+			},
 		},
 	},
 	variants: {},
