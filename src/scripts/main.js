@@ -1,3 +1,9 @@
+document.querySelectorAll('.media-list-info').forEach((el) => {
+  if (!el.textContent.trim()) {
+      el.style.display = 'none';
+  }
+});
+
 document.querySelectorAll('.media-list-btn').forEach((button) => {
     button.addEventListener('click', () => {
       const targetId = button.getAttribute('data-target');

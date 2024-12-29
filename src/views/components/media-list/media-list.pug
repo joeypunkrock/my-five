@@ -40,5 +40,7 @@ mixin mediaList(prefix, items, customClass = '')
               allow="encrypted-media"
               allowfullscreen
             )
+        if item.artistSec
+          .media-list-info.text-left.rounded-b-2xl.hidden.leading-5(class="sm:leading-8 sm:text-justify md:text-lg")!=item.desc
           
-        .media-list-info.text-left.rounded-b-2xl.hidden.leading-5(class="sm:leading-6 sm:text-justify")!= item.desc
+        .media-list-info.text-left.rounded-b-2xl.hidden.leading-5(class="sm:leading-8 sm:text-justify md:text-lg")!=item.desc

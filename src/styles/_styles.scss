@@ -87,13 +87,13 @@
             }
             @screen lg {
                 top: 1100px;
-                right: 687px;
+                right: 727px;
                 width: 120px;
                 height: 120px;
             }
             @screen xl {
                 top: 1100px;
-                right: 157px;
+                right: 97px;
                 width: 120px;
                 height: 120px;
             }
@@ -141,6 +141,9 @@
         margin-bottom: 2rem;
         padding: 1.5rem;
         background: rgba(0, 0, 0, 0.8);
+        &:empty {
+            display: none;
+        }
     }
 
     /* Add this class to handle aspect ratio */
