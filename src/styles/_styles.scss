@@ -106,15 +106,14 @@
         }
         &--vr-shiba-rock {
             @apply absolute bg-[url('../assets/images/sticker-vr-shiba-rock.png')] bg-contain bg-no-repeat hidden md:block;
-            top: auto;
             bottom: -33px;
-            left: -20px; 
-            right: auto;
+            left: -17px;
+            top: 570px; 
             width: 300px;
             height: 300px;
             transform: rotate(13deg);
             @screen lg {
-                bottom: -30px;
+                left: 97px;
             }
         }
     }
