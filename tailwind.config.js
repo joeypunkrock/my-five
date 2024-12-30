@@ -24,7 +24,7 @@ module.exports = {
 				}
 			},
 			screens: {
-				smallMobile: '415px', // Define your custom screen size
+				smallMobile: '475px',
 			},
 		},
 	},
