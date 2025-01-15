@@ -8,7 +8,7 @@ block config
   - var siteNav = 1
   - var pageTitle = ' [sitename] '
   - var ogDescription =  ' [desc] '
-  - var ogImage = `${assetPath}images/og_image.jpg`; // TODO:  This needs absolute path with full URL
+  - var ogImage = `https://joeypunkrock.github.io/my-five/assets/images/og_image.jpg`; // TODO:  This needs absolute path with full URL
 
 doctype html
 html(lang='en')
@@ -18,7 +18,7 @@ html(lang='en')
     title= (isHome) ? pageTitle : '[sitename] | ' + pageTitle
     meta(name='description', content= (isHome) ? ' [desc] ' : ogDescription)
     meta(property='og:description', content= (isHome) ? ' [desc] ' : ogDescription)
-    meta(property='og:image', content= (isHome) ? `${assetPath}images/og_image.jpg` : ogImage)
+    meta(property='og:image', content= "https://joeypunkrock.github.io/my-five/assets/images/og_image.jpg")
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(name="msapplication-tap-highlight" content="no")
     
