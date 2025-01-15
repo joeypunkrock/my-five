@@ -7,16 +7,15 @@ block config
   - var isHome = false
   - var siteNav = 1
   - var pageTitle = ' [sitename] '
-  - var ogImage = `https://joeypunkrock.github.io/my-five/assets/images/og_image.jpg?v2`; // TODO:  This needs absolute path with full URL
+  - var ogImage = `https://joeypunkrock.github.io/my-five/assets/images/og_image.jpg`; // TODO:  This needs absolute path with full URL
 
 doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge,chrome=1')
-    title= (isHome) ? pageTitle : '[sitename] | ' + pageTitle
-    meta(name="og:site_name" content="My Five")
-    meta(property='og:image', content="https://joeypunkrock.github.io/my-five/assets/images/og_image.jpg?v2")
+    title= 'My Five'
+    meta(property='og:image', content="https://joeypunkrock.github.io/my-five/assets/images/og_image.jpg")
     meta(property="og:url" content="https://joeypunkrock.github.io/my-five")
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(name="msapplication-tap-highlight" content="no")
