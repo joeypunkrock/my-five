@@ -41,7 +41,7 @@
             }
             @screen lg {
                 left: 90px;
-                top: 720px;
+                top: 820px;
                 width: 150px;
                 height: 150px;
             }
@@ -55,13 +55,20 @@
         &--rainbow-dash-cutie-mark {
             @apply absolute bg-[url('../assets/images/sticker-rainbow-dash-cutie-mark.png')] bg-contain bg-no-repeat hidden;
             transform: rotate(35deg);
-            right: 10px;
+            right: 60px;
             left: auto;
             top: 731px;
             width: 120px;
             height: 120px;
             @screen smallMobile {
                 @apply block;
+            }
+            @screen md {
+                right: 110px;
+            }
+            @screen lg {
+                right: 230px;
+                top: 631px;
             }
         }
         &--wolf {
