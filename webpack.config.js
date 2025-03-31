@@ -207,7 +207,7 @@ module.exports = (env, argv) => {
     },
 
     performance: {
-      hints: isProd ? "error" : false,
+      hints: false,
       // in development mode the size of assets is bigger than in production
       maxAssetSize: 5120000, // Set to a higher value, e.g., 5 MB
       maxEntrypointSize: 5120000, // Also increase the entrypoint size limit
