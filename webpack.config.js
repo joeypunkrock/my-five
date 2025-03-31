@@ -106,10 +106,10 @@ module.exports = (env, argv) => {
             from: "src/assets/images",
             to: `assets/images`,
           },
-          // {
-          //   from: "src/assets/videos",
-          //   to: `assets/videos`,
-          // },
+          {
+            from: "src/assets/videos",
+            to: `assets/videos`,
+          },
         ],
       }),
     ].concat(buildPlugins),
@@ -136,7 +136,6 @@ module.exports = (env, argv) => {
             },
           },
         },
-
         {
           test: /\.json$/i,
           type: "asset/resource",
@@ -193,6 +192,16 @@ module.exports = (env, argv) => {
           test: /\.(svg)$/i,
           resourceQuery: /inline/,
           type: "asset/inline",
+        },
+        
+        // video files
+        {
+          test: /\.(mp4|webm|ogg)$/i,
+          type: "asset/resource",
+          include: /assets[\\/]videos/, // only include from `assets/videos` directory
+          generator: {
+            filename: "assets/videos/[name][ext]",
+          },
         },
       ],
     },

@@ -13,21 +13,19 @@ mixin mediaList(prefix, items, customClass = '')
               div.text-pallete-primary-5.mt-1(class="md:mt-0") <span class="hidden sm:inline">&nbsp;-</span> #{item.artist}
           .media-list-btn-close.absolute.right-4.top-0.bottom-0.my-auto.hidden(class="h-[19px]") &#10006;
 
-        if item.videoId
-          div.media-list-video.responsive-video.relative.w-full.overflow-hidden.hidden(
+        if item.localVideoFilename
+          div.media-list-video.local-video-container.relative.w-full.overflow-hidden.hidden(
             id=`${prefix}-media-${index}`
             class="sm:max-w-[880px] sm:rounded-t-2xl"
           )
-            iframe(
-              id=`youtube-iframe-${prefix}-${index}`
-              src=`https://www.youtube.com/embed/${item.videoId}?enablejsapi=1`
-              title="YouTube video player"
-              class="absolute top-0 left-0 w-full h-full"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+            video.controls.w-full.h-auto.media-html5-video(
+              preload="metadata"
+              playsinline
             )
-        if item.spotifyLink
+              source(src=item.localVideoFilename, type="video/mp4")
+              Your browser does not support the video tag.
+
+        else if item.spotifyLink
           div.media-list-video.spotify-container.relative.w-full.overflow-hidden.hidden(
             id=`${prefix}-media-${index}`
             class="sm:max-w-[880px] h-[420px]"
@@ -40,7 +38,8 @@ mixin mediaList(prefix, items, customClass = '')
               allow="encrypted-media"
               allowfullscreen
             )
+
         if item.artistSec
           .media-list-info.text-left.rounded-b-2xl.hidden.leading-5(class="sm:leading-8 sm:text-justify md:text-lg")!=item.desc
-          
+
         .media-list-info.text-left.rounded-b-2xl.hidden.leading-5(class="sm:leading-8 sm:text-justify md:text-lg")!=item.desc
