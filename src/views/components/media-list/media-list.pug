@@ -23,6 +23,7 @@ mixin mediaList(prefix, items, customClass = '')
               preload="metadata"
               playsinline
               controlsList="nodownload"
+              onClick="event.stopPropagation()"
             )
               source(src=item.localVideoFilename, type="video/mp4")
               Your browser does not support the video tag.
