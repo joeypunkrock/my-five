@@ -18,9 +18,11 @@ mixin mediaList(prefix, items, customClass = '')
             id=`${prefix}-media-${index}`
             class="sm:max-w-[880px] sm:rounded-t-2xl"
           )
-            video.controls.w-full.h-auto.media-html5-video(
+            video.w-full.h-auto.media-html5-video(
+              controls
               preload="metadata"
               playsinline
+              controlsList="nodownload"
             )
               source(src=item.localVideoFilename, type="video/mp4")
               Your browser does not support the video tag.
