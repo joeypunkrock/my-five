@@ -3,11 +3,11 @@ mixin mediaList(prefix, items, customClass = '')
     each item, index in items
       li.mb-2
         button.media-list-btn.pt-1.pb-4.px-4.w-full.text-left.flex.items-baseline.mx-auto.relative(
-          class="sm:px-10 sm:pt-2 sm:max-w-[380px]"
+          class="sm:px-10 sm:pt-2 sm:max-w-[380px] md:max-w-[400px]"
           data-target=`${prefix}-media-${index}`
         )
           span.mr-2.text-yellow-400 ▶&nbsp; 
-          div.mt-2.items-baseline(class="sm:flex")
+          div.mt-2.items-baseline.text-md(class="sm:flex lg:text-lg")
             span= item.title
             if item.artist
               div.text-pallete-primary-5.mt-1(class="md:mt-0") <span class="hidden sm:inline">&nbsp;-</span> #{item.artist}
