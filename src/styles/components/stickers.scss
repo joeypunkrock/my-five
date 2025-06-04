@@ -1,0 +1,138 @@
+@layer components {
+    .sticker {
+        @apply w-[190px] h-[190px];
+        filter: drop-shadow(4px 3px 1px black);
+
+        &--orrell-badboys {
+            @apply absolute bg-[url('../assets/images/sticker-orrell-badboys.png')] bg-contain bg-no-repeat hidden sm:block;
+            transform: rotate(-10deg);
+            left: auto;
+            right: 10px;
+            top: 360px;
+            width: 100px;
+            height: 100px;
+
+            @screen sm {
+                top: 300px;
+                width: 100px;
+                height: 100px;
+            }
+
+            @screen md {
+                top: 660px;
+                left: -50px;
+                right: auto;
+                width: 120px;
+                height: 120px;
+            }
+
+            @screen lg {
+                left: 90px;
+                top: 820px;
+                width: 150px;
+                height: 150px;
+            }
+
+            @screen 2xl {
+                left: 90px;
+                top: 920px;
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        &--rainbow-dash-cutie-mark {
+            @apply absolute bg-[url('../assets/images/sticker-rainbow-dash-cutie-mark.png')] bg-contain bg-no-repeat hidden;
+            transform: rotate(35deg);
+            right: -70px;
+            left: auto;
+            top: 731px;
+            width: 120px;
+            height: 120px;
+
+            @screen smallMobile {
+                @apply block;
+            }
+
+            @screen md {
+                right: -52px;
+            }
+
+            @screen lg {
+                right: 30px;
+                top: 631px;
+            }
+        }
+
+        &--wolf {
+            @apply absolute bg-[url('../assets/images/sticker-wolf.png')] bg-contain bg-no-repeat hidden;
+            transform: rotate(35deg);
+            left: auto;
+
+            height: 130px;
+            right: 30px;
+            top: 975px;
+            width: 130px;
+
+            @screen smallMobile {
+                @apply block;
+            }
+
+            @screen sm {
+                right: 30px;
+                top: 1050px;
+                width: 120px;
+                height: 120px;
+            }
+
+            @screen md {
+                top: 1100px;
+                right: 500px;
+                width: 120px;
+                height: 120px;
+            }
+
+            @screen lg {
+                top: 1100px;
+                right: 97px;
+                width: 120px;
+                height: 120px;
+            }
+
+            @screen xl {
+                top: 1100px;
+                right: 97px;
+                width: 120px;
+                height: 120px;
+            }
+
+            @screen 2xl {
+                right: 107px;
+                top: 1170px;
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        &--vr-shiba-rock {
+            @apply absolute bg-[url('../assets/images/sticker-vr-shiba-rock.png')] bg-contain bg-no-repeat hidden md:block;
+            bottom: -33px;
+            left: -23px;
+            top: 200px;
+            width: 300px;
+            height: 300px;
+            transform: rotate(13deg);
+
+            @screen lg {
+                left: 57px;
+                top: 170px;
+            }
+
+            @screen xl {
+                left: 67px;
+                top: 190px;
+            }
+
+        }
+    }
+}

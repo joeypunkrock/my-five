@@ -1,0 +1,70 @@
+@layer components {
+    .holder-btn-close-all {
+        @apply absolute bottom-[-45px] right-[10px] text-white z-10 text-xl;
+    }
+
+
+    .media-list-btn {
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &.active {
+            background: rgba(0, 0, 0, 0.8);
+
+            &:hover {
+                opacity: 1;
+
+                .media-list-btn-close {
+                    @apply text-yellow-400;
+                }
+            }
+        }
+
+        &.active {
+            @apply rounded-t-2xl;
+        }
+    }
+
+    .media-list-info {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: rgba(0, 0, 0, 0.2);
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    /* Add this class to handle aspect ratio */
+    .responsive-video {
+        padding-bottom: 56.25%;
+        /* Aspect ratio 16:9 */
+        height: 0;
+    }
+
+    .responsive-video iframe {
+        @apply absolute top-0 left-0 w-full h-full;
+    }
+
+    .spotify-container {
+        position: relative;
+        /* Keep positioning relative to contain the iframe */
+        padding-top: 160px;
+        /* Maintain aspect ratio for Spotify player */
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        /* Hide any overflow issues */
+    }
+
+    .spotify-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        /* Remove iframe border for cleaner appearance */
+    }
+}

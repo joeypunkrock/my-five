@@ -1,0 +1,49 @@
+.scene
+    .ufoWrap
+        .center
+            .ufoInner
+                #ufo
+                    ul.blinkers
+                        each i in [1, 2, 3, 4]
+                            li
+                    .dome
+                    .antigrav
+                        .rings
+                            .inner
+                            ul
+                                each i in Array(64).fill()
+                                    li
+                    .thrust
+                        ul
+                            each i in [1, 2, 3, 4, 5, 6, 7, 8]
+                                li
+            //- .ufo-player
+            //-     div.media-list-video.responsive-video.relative.w-full(
+            //-         id=`foo`
+            //-         class="sm:max-w-[880px] sm:rounded-t-2xl"
+            //-     )
+            //-         iframe(
+            //-             id=`youtube-iframe-foo`
+            //-             src=`https://www.youtube.com/embed/Q3CV5KX9_flHIvOR?enablejsapi=1`
+            //-             title="YouTube video player"
+            //-             class="absolute top-0 left-0 w-full h-full"
+            //-             frameborder="0"
+            //-             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            //-             allowfullscreen
+            //-     )
+    .foreground.hidden(class="md:block")
+        ul.trees3
+            each i in Array(16).fill()
+                li
+        ul.trees2
+            each i in Array(16).fill()
+                li
+        ul.trees1
+            each i in Array(16).fill()
+                li
+    .background.hidden(class="md:block")
+        .stars
+            each i in Array(22).fill()
+                li.small
+            each i in Array(17).fill()
+                li

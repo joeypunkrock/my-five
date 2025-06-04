@@ -1,0 +1,15 @@
+# Ignore large video files that caused issues
+**/taylor_npr.mp4
+**/taylor_npr-conv.mp4
+
+# Optional: ignore all videos over time if you don't want them in git
+# **/*.mp4
+
+# Node-related
+node_modules/
+dist/
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
