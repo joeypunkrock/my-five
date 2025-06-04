@@ -1,0 +1,48 @@
+mixin mediaList(prefix, items, customClass = '')
+  ul.media-list.mt-3.list-none.pl-0.mx-auto(class=customClass)
+    each item, index in items
+      li.mb-2
+        button.media-list-btn.pt-1.pb-4.px-4.w-full.text-left.flex.items-baseline.mx-auto.relative(
+          class="sm:px-10 sm:pt-2 sm:max-w-[380px] md:max-w-[400px]"
+          data-target=`${prefix}-media-${index}`
+        )
+          span.mr-2.text-yellow-400 ▶&nbsp; 
+          div.mt-2.items-baseline.text-md(class="sm:flex lg:text-lg")
+            span= item.title
+            if item.artist
+              div.text-pallete-primary-5.mt-1(class="md:mt-0") <span class="hidden sm:inline">&nbsp;-</span> #{item.artist}
+          .media-list-btn-close.absolute.right-4.top-0.bottom-0.my-auto.hidden(class="h-[19px]") &#10006;
+
+        if item.localVideoFilename
+          div.media-list-video.local-video-container.relative.w-full.overflow-hidden.hidden(
+            id=`${prefix}-media-${index}`
+            class="sm:max-w-[880px] sm:rounded-t-2xl"
+          )
+            video.w-full.h-auto.media-html5-video(
+              controls
+              preload="metadata"
+              playsinline
+              controlsList="nodownload"
+              onClick="event.stopPropagation()"
+            )
+              source(src=item.localVideoFilename, type="video/mp4")
+              Your browser does not support the video tag.
+
+        else if item.spotifyLink
+          div.media-list-video.spotify-container.relative.w-full.overflow-hidden.hidden(
+            id=`${prefix}-media-${index}`
+            class="sm:max-w-[880px] h-[420px]"
+          )
+            iframe(
+              src=`https://open.spotify.com/embed/${item.spotifyLink}`
+              title="Spotify player"
+              class="absolute top-0 left-0 w-full h-full"
+              frameborder="0"
+              allow="encrypted-media"
+              allowfullscreen
+            )
+
+        if item.artistSec
+          .media-list-info.mt-4.text-left.rounded-b-2xl.hidden.leading-5(class="sm:leading-8 sm:text-justify md:text-lg")!=item.desc
+
+        .media-list-info.mt-4.text-left.rounded-b-2xl.hidden.leading-5(class="sm:leading-8 sm:text-justify md:text-lg")!=item.desc

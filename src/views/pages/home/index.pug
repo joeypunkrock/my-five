@@ -1,0 +1,139 @@
+extends ../../layouts/base
+
+include ../../components/media-list/media-list
+
+block config
+  - pageTitle = ''
+  - page = ''
+  - isHome = true
+
+block navbar
+  include ../../components/layout/navbar/navbar
+
+block content
+
+  include ../../components/bg-forest/bg-forest
+
+
+
+  div.px-4(class="lg:container")
+
+    .max-w-5xl.mx-auto
+      h1.mt-9.text-center.tracking-widest.font-bodoni.font-thin.pt-8(class="md:mt-12 md:pt-10 md:text-7xl") My Five
+      div.relative(class="h-[72vh] 2xl:h-[74vh]")
+        .content-holder.my-8.relative.z-10.h-full(class="sm:h-[100%] md:py-6 md:mt-12 md:px-6")
+          div.overflow-x-hidden.overflow-y-auto.h-full.relative.mt-2(class="px-8 md:px-12 md:mt-1").custom-scrollbar-1
+            .sticker.sticker--orrell-badboys
+            //.sticker.sticker--orrell-badboys
+            .sticker.sticker--rainbow-dash-cutie-mark
+            .sticker.sticker--wolf
+            .sticker.sticker--vr-shiba-rock
+            p.text-justify.text-sm.leading-5(class="md:leading-8 md:text-xl sm:text-justify") <strong>My top five songs, artists, and albums</strong>—each a piece of art that resonates deeply with me. A diary to share my journey, nostalgia, and soundtrack to my life. May they offer a glimpse into my soul and maybe inspire and connect with you too.
+              span.block.mt-3.text-sm(class="lg:inline lg:mt-0 lg:pl-4 sm:text-md md:text-lg") <span class="text-yellow-400 mr-1">▶</span> <span class="hidden md:inline ">Click</span><span class="md:hidden" aria-hidden>Tap</span> each item to open more.
+            p.italic.mt-4.text-pallete-primary-5.text-center.text-xs(class="sm:text-md md:text-lg sm:text-right") I revel in these moments. It brings me pure joy x
+
+            section.mt-10.text-center.mx-auto.relative.z-10(class="md:max-w-2xl sm:mt-10 lg:mt-2")
+              h3.text-2xl.tracking-widest.font-bodoni Songs
+              +mediaList('songs', [
+                { title: 'Sprawl II', artist: 'Hey Ocean!', videoId: 'jdK4yczg_uY', localVideoFilename: 'https://joeypunkrock.github.io/my-five/assets/videos/hey_ocean_sprawl_II.mp4', desc: `Hey Ocean has been my constant, The band leaving an indelible mark on my life. This song is beautiful, powerful, and profoundly moving. I inspire you, close your eyes, listen, and just be&#x2026; <div style="text-align:left; padding-bottom: 8px;">
+  <span style="color: white;">Link: </span>
+  <a href="https://www.youtube.com/watch?v=jdK4yczg_uY" target="_blank" style="color: #3b82f6; text-decoration: underline;">https://www.youtube.com/watch?v=jdK4yczg_uY</a>
+</div>` },
+                { title: 'Good Girl', artist: 'The Living Tombstone', videoId: 'q1pjmN3RF3c', localVideoFilename: '/my-five/assets/videos/good_girl_the_living_tombstone.mp4', desc: `This song blew me away with its high production and profound energy from an independent artist. It’s a song about breaking free and being yourself, resonating deeply with me. Powerful, hard-hitting, and unforgettable. Shake your tail, you do you! <div style="text-align:left; padding-bottom: 8px;">
+  <span style="color: white;">Link: </span>
+  <a href="https://www.youtube.com/watch?v=q1pjmN3RF3c" target="_blank" style="color: #3b82f6; text-decoration: underline;">https://www.youtube.com/watch?v=q1pjmN3RF3c</a>
+</div>` },
+                { title: 'Stop Crying Your Heart Out', artist: 'Oasis', videoId: 'dhZUsNJ-LQU', localVideoFilename: '/my-five/assets/videos/oasis_stop-crying-your-heart-out.mp4', desc: `This song is pure soul for me. It connects deeply to my roots and my friends who are my family. It’s all about love and connection. Closing my eyes and listening fills me with a sense of belonging I can\'t put into words. Feel it&#x2026; <div style="text-align:left; padding-bottom: 8px;">
+  <span style="color: white;">Link: </span>
+  <a href="https://www.youtube.com/watch?v=dhZUsNJ-LQU" target="_blank" style="color: #3b82f6; text-decoration: underline;">https://www.youtube.com/watch?v=dhZUsNJ-LQU</a>
+</div>` },
+                { title: 'Universe', artist: 'Metajoker', videoId: 'fNOchIIms5w', localVideoFilename: '/my-five/assets/videos/metajoker_universe.mp4', desc: `This song is a beautiful part of the MLP community, which is so full of creativity and passion. Listening to it feels profound, like I’m flying free and exploring the universe. Limitless and weightless. Crafted by just some guy in their room, but uplifted by the weight of something so much more massive!<br><br><div style="text-align:left; padding-bottom: 8px;">
+  <span style="color: white;">Honourable mention - These songs go hand in hand: </span>
+  <a href="https://www.youtube.com/watch?v=kinwxLo-VVg" target="_blank" style="color: #3b82f6; text-decoration: underline;">https://www.youtube.com/watch?v=kinwxLo-VVg</a>
+</div> <div style="text-align:left; padding-bottom: 8px;">
+  <span style="color: white;">Link: </span>
+  <a href="https://www.youtube.com/watch?v=fNOchIIms5w" target="_blank" style="color: #3b82f6; text-decoration: underline;">https://www.youtube.com/watch?v=fNOchIIms5w</a>
+</div>` },
+                { title: 'Long Live', artist: 'Taylor Swift', videoId: 'TFglkZVPBY0', localVideoFilename: '/my-five/assets/videos/taylor-swift_long live_new_years_day_live_reputation_tour.mp4', desc: `This song, every lyric, every feeling, just feels so right. There’s SOUL behind it; I connect with it because so many others do. Imagining each and every amazing individual listening and loving is just beautiful. No wonder so many people connect with her.&nbsp; I\'m a sucker for Taylor Swift. Is rite! 
+                
+                
+                
+
+ <div style="text-align:left; padding-bottom: 8px;">
+  <span style="color: white;">Link: </span>
+  <a href="https://www.youtube.com/watch?v=TFglkZVPBY0" target="_blank" style="color: #3b82f6; text-decoration: underline;">https://www.youtube.com/watch?v=TFglkZVPBY0</a>
+</div>` }, 
+              ])
+
+            section.mt-10.text-center.max-w-md.mx-auto(class="md:max-w-2xl")
+              h3.text-2xl.tracking-widest.font-bodoni Artists
+              +mediaList('artists', [
+                { 'artistSec': true, title: 'Hey Ocean!', videoId: 'A5e8On2p5Uw', localVideoFilename: '/my-five/assets/videos/hey_ocean_alleyways.mp4', desc: `Hey Ocean is a big part of my life. David Vertesi, Ashleigh Ball, and David Beckingham make music that feels like love and comfort. I discovered them through Ashleigh Ball\'s work and have been hooked ever since. Their songs aren’t just nostalgic. They bring me joy, peace, and a sense of who I am. This band has truly shaped me and will always have a special place in my heart. <div style="text-align:left; padding-bottom: 8px;">
+  <span style="color: white;">Link: </span>
+  <a href="https://www.youtube.com/watch?v=A5e8On2p5Uw" target="_blank" style="color: #3b82f6; text-decoration: underline;">https://www.youtube.com/watch?v=A5e8On2p5Uw</a>
+</div>` },
+                {
+  artistSec: true,
+  title: 'Daniel Ingram (MLP)',
+  videoId: '9XBXCi1oKKU',
+  localVideoFilename: '/my-five/assets/videos/daniel_ingram_time_to_come_together.mp4',
+  desc: `Daniel Ingram is a phenomenal artist whose music has worked and inspired the MLP and many multiple communities. Through countless incredible songs, he has created moments that resonate deeply, not just for me, but for so many others. His ability to capture emotion, tell stories, and bring joy through his music in unmatched ways, his work a cornerstone of cartoon musicals!
+<br><br>
+<div style="text-align:left; padding-bottom: 8px;">
+  <span style="color: white;">Special mention 1 ❤️ </span>
+  <a href="https://www.youtube.com/watch?v=jZ8Ggjl6JPA" target="_blank" style="color: #3b82f6; text-decoration: underline;">https://www.youtube.com/watch?v=jZ8Ggjl6JPA</a>
+</div>
+<div style="text-align:left;">
+  <span style="color: white;">Special mention 2 </span>
+  <a href="https://www.youtube.com/watch?v=UVjUEtxwogE" target="_blank" style="color: #3b82f6; text-decoration: underline;">https://www.youtube.com/watch?v=UVjUEtxwogE</a>
+</div>
+`
+},
+              { 'artistSec': true, title: 'Oasis', videoId: 'cmpRLQZkTb8', localVideoFilename: '/my-five/assets/videos/oasis _dont_look_back_in_anger.mp4', 'desc': `Oasis feels like a natural part of life like i'm woven into them. I discovered them through my best mates, and from that moment, their music became something more than just songs; it’s ethereal. There’s an unexplainable magic to their sound - Oasis isn’t just a band - they’re an experience, and for me, they’re nothing short of amazing. <div style="text-align:left; padding-bottom: 8px;">
+                <span style="color: white;">Link: </span>
+                <a href="https://www.youtube.com/watch?v=cmpRLQZkTb8" target="_blank" style="color: #3b82f6; text-decoration: underline;">https://www.youtube.com/watch?v=cmpRLQZkTb8</a>
+              </div>` },
+                { 'artistSec': true, title: 'Crywank', videoId: 'GiesKu55IFk', localVideoFilename: '/my-five/assets/videos/crywank_memen_o_mori.mp4', desc: `Crywank is an English anti-folk band based out of Manchester. Jay Clayton, pouring pure feeling into his work. The band’s music blends love, despair, and raw honesty, cutting through with an authenticity that is both beautiful and haunting. Crywanks songs resonate beautifully deeply.<div style="text-align:left; padding-bottom: 8px;">
+  <span style="color: white;">Link: </span>
+  <a href="https://www.youtube.com/watch?v=GiesKu55IFk" target="_blank" style="color: #3b82f6; text-decoration: underline;">https://www.youtube.com/watch?v=GiesKu55IFk</a>
+</div>` },
+ { 'artistSec': true, title: 'Taylor Swift', videoId: 'FvVnP8G6ITs', localVideoFilename: '/my-five/assets/videos/taylor_tinydesk.mp4', 'desc': `Taylor Swift is a musical wonder. Shes nostalgic, wonderful and two thumbs up from where I'm sitting. <div style="text-align:left; padding-bottom: 8px;">
+  <span style="color: white;">Link: </span>
+  <a href="https://www.youtube.com/watch?v=FvVnP8G6ITs" target="_blank" style="color: #3b82f6; text-decoration: underline;">https://www.youtube.com/watch?v=WtBHEf5_XxU</a>
+</div>` }
+              ], 'media-list--artists')
+
+            section.mt-10.text-center.max-w-md.mx-auto(class="md:max-w-2xl")
+              h3.text-2xl.tracking-widest.font-bodoni Albums
+              +mediaList('albums', [
+                { 
+                  title: 'The War of the Worlds', 
+                  artist: 'Jeff Wayne', 
+                  spotifyLink: 'album/7ligZljXfUtcKPCotWul5g?si=aqHTIteMTJ-SoN2Ue7yLyQ'
+                },
+                { 
+                  title: 'Ocean Eyes', 
+                  artist: 'Owl City', 
+                  spotifyLink: 'album/3vf65wfk1EEjVhy6BjENsS?si=65adaf4ed44e4c5e'
+                },
+                { 
+                  title: 'Live Breath Build Believe', 
+                  artist: 'The Skints', 
+                  spotifyLink: 'album/11GbsdBi8fViqec6nhRz0j?si=8e004175a6cd47ff'
+                },
+                { 
+                  title: 'Liberation', 
+                  artist: 'Marcus Warner', 
+                  spotifyLink: 'album/5aKOgMD30tp42cVORMc57h?si=RQDoJnkHT6uKlqdlKWtuHQ'
+                },
+                { 
+                  title: 'All Killer, No Filler', 
+                  artist: 'Sum 41', 
+                  spotifyLink: 'album/2UCWsnmZEVg9HhnMeKTsim?si=665b616dce7f46d7'
+                },
+              ])
+
+
+
+block footer
+  include ../../components/layout/footer/footer
