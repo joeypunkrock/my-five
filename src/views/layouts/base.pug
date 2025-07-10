@@ -43,10 +43,11 @@ html(lang='en')
     main
         block content
 
-        div.under-fix.opacity-80
-          div Under Fix
-            div.text-2xl.text-white un momento 😉
-            div#animated-dots.text-white.text-7xl.-mt-8
+        div.under-fix.opacity-80.px-1.py-8(style="transform: translateY(-248px) rotate(-6deg) translateX(1px) scale(0.8);     filter: drop-shadow(2px 4px 6px black);" class="bg-black md:bg-opacity-20")
+          div
+            <div style="line-height: 91px;">Under Fix</span>
+            div.text-3xl.text-white.mt-2(class="md:bg-transparent") un momento 😉
+            div#animated-dots.text-white.text-7xl.-mt-7
 
     block footer
 
