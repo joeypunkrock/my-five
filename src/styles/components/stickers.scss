@@ -2,6 +2,7 @@
     .sticker {
         @apply w-[190px] h-[190px];
         filter: drop-shadow(4px 3px 1px black);
+        z-index: -1;
 
         &--orrell-badboys {
             @apply absolute bg-[url('../assets/images/sticker-orrell-badboys.png')] bg-contain bg-no-repeat hidden sm:block;

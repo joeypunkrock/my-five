@@ -33,12 +33,23 @@ document.querySelectorAll('.media-list-btn').forEach((button) => {
         }
       });
 
+      console.log('mediaElement:', mediaElement);
+console.log('video:', video);
+
+
       // Autoplay current video
-      if (video) {
-        requestAnimationFrame(() => {
-          video.play();
-        });
-      }
+if (video) {
+  // Let DOM update first, then play
+  setTimeout(() => {
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch((err) => {
+        console.warn('Autoplay failed:', err);
+      });
+    }
+  }, 0); // microtask delay
+}
+
 
     } else {
       // Hide media
@@ -58,13 +69,27 @@ document.querySelectorAll('.media-list-btn').forEach((button) => {
 });
 
 // ✅ Add click-to-toggle play/pause on the video itself
-document.querySelectorAll('.media-html5-video').forEach((video) => {
-  video.addEventListener('pointerdown', (e) => {
-    e.stopPropagation(); // prevent bubbling to parent
-    if (video.paused) {
-      video.play();
-    } else {
-      video.pause();
-    }
-  });
-});
+// document.querySelectorAll('.media-html5-video').forEach((video) => {
+//   video.addEventListener('pointerdown', (e) => {
+//     e.stopPropagation(); // prevent bubbling to parent
+//     if (video.paused) {
+//       video.play();
+//     } else {
+//       video.pause();
+//     }
+//   });
+// });
+
+// ...existing code...
+
+// Animated dots under "un momento"
+(function animateDots() {
+  const dotsEl = document.getElementById('animated-dots');
+  if (!dotsEl) return;
+  let count = 0;
+  setInterval(() => {
+    count = (count + 1) % 3;
+    dotsEl.textContent = '.'.repeat(count + 1);
+  }, 500);
+})();
+// ...existing code...
