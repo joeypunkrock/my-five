@@ -13,7 +13,7 @@ document.querySelectorAll('.media-list-btn').forEach((button) => {
 
     if (isHidden) {
       // Show selected media
-      mediaElement.classList.remove('hidden');
+      //mediaElement.classList.remove('hidden');
       button.classList.add('active');
       if (closeButton) closeButton.classList.remove('hidden');
       if (infoElement) infoElement.classList.remove('hidden');
